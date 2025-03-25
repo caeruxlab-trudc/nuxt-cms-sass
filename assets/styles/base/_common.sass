@@ -1,0 +1,66 @@
+@use '../variables/index' as font
+@use '../mixins/common' as mixin
+// common
+html,
+body 
+    width: 100%
+    height: 100%
+    color: font.$clr-base-font
+    font-size: 100%
+    font-family: font.$base-font-family
+    -webkit-text-size-adjust: 100%
+    -ms-text-size-adjust: 100%
+    word-wrap: break-word
+    text-align: center
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.75
+    letter-spacing: 0.05em
+    &.hidden 
+        height: 100%
+        overflow: hidden
+    
+
+* 
+    box-sizing: border-box
+
+img 
+    width: 100%
+    height: 100%
+    object-fit: cover
+    max-width: 100%
+
+ul,ol 
+    list-style: none
+
+a 
+    outline: none
+    text-decoration: none
+    -webkit-transition: .3s font.$ease-inout
+            transition: .3s font.$ease-inout
+
+.util_sp 
+    display: none !important
+    @include mixin.sp
+        display: block !important
+    
+
+.util_pc 
+    display: block !important
+    @include mixin.sp
+        display: none !important
+    
+
+@media print 
+    img 
+        display: none
+    
+
+.splide__arrows
+    .splide__arrow
+        width: 36px
+        height: 36px
+        &:disabled
+            opacity: 0
+        .icon
+            font-size: 20px

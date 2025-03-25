@@ -1,0 +1,91 @@
+.main
+    text-align: left
+    color: $clr-base-font
+    .section
+        .inner
+            max-width: 1140px
+            margin: 0 auto
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 60px 0
+            @include pc 
+                max-width: get_pc(1140)
+                padding: get_pc(60) 0
+.lst-container-products
+    width: 570px
+    @include pc
+        width: get_pc(570)
+    &-item-link
+        display: flex
+        justify-content: space-between
+        padding: 30px 29px 22px
+        color: #111111
+        @include pc
+            padding: get_pc(30) get_pc(29) get_pc(22)
+        &-image
+            width: 175px
+            height: 190px
+            @include pc
+                width: get_pc(175)
+                height: get_pc(190)
+        &-content
+            width: 305px
+            @include pc
+                width: get_pc(305)
+            h2
+                font-size: 20px
+                margin-bottom: 22px
+                @include pc
+                    font-size: get_pc(20)
+                    margin-bottom: get_pc(22)
+            p
+                font-size: 14px
+                color: #999999
+                font-style: italic
+                @include pc
+                    font-size: get_pc(14)
+            span
+                font-size: 30px
+                font-weight: 700
+                @include pc
+                    font-size: get_pc(30)
+.container-layout 
+    width: 557px
+    padding: 30px
+    padding-left: 43px
+    @include pc
+        width: get_pc(557)
+        padding: get_pc(30)
+        padding-left: get_pc(43)
+    h1
+        color: #292d33
+        font-size: 90px
+        font-weight: 700
+        line-height: 1
+        @include pc
+            font-size: get_pc(90)
+    .sub
+        font-size: 24px
+        margin-bottom: 30px
+        display: block
+        @include pc
+            font-size: get_pc(24)
+            margin-bottom: get_pc(30)
+    p
+        font-size: 16px
+        font-style: italic
+        margin-bottom: 40px
+        @include pc
+            font-size: get_pc(16)
+            margin-bottom: get_pc(40)
+    .btn
+        padding: 10px 20px
+        text-align: center
+        background: #000
+        color: #fff
+        font-size: 14px
+        text-transform: uppercase
+        @include pc
+            padding: get_pc(10) get_pc(20)
+            font-size: get_pc(14)
