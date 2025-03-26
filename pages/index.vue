@@ -6,7 +6,7 @@
           <div class="loading" v-if="status === 'pending'">loading....</div>
           <ul v-else class="lst-container-products">
             <li class="lst-container-products-item" v-for="product in products" :key="product.id">
-              <NuxtLink :to="`/product/${product.product_code}`" class="lst-container-products-item-link">
+              <NuxtLink :to="`/product/${product.product_code.toLowerCase()}`" class="lst-container-products-item-link">
                 <div class="lst-container-products-item-link-image">
                   <NuxtImg :src="product.product_image.url" :alt="product.product_name" class="picture" />
                 </div>
@@ -32,8 +32,8 @@
 
 <script lang="ts" setup>
 const response = await useFetchProducts();
-const products = response?.products.value;
-const status = response?.status.value;
+const products = response?.products;
+const status = response?.status;
 </script>
 
 <style lang="sass" scoped>
