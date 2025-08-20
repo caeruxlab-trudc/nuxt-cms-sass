@@ -1,0 +1,13 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main] # branch bạn muốn deploy khi push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Vercel Deploy Hook
+        run: curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_5AiyLZ1YUm5sDFbkDr5tV0LlKW6E/jarXQEiVc9
